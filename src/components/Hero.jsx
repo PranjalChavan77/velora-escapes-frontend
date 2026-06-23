@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { cities } from "../assets/assets";
 import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
+import heroImage from "../assets/hero-Image.png";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -28,7 +29,9 @@ const Hero = () => {
   };
 
   return (
-    <div className='flex flex-col items-start justify-center px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-[url("src/assets/hero-Image.png")] bg-no-repeat bg-cover bg-center h-screen'>
+    <div 
+    style={{ backgroundImage: `url(${heroImage})` }}
+    className='flex flex-col items-start justify-center px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-no-repeat bg-cover bg-center h-screen'>
       <p className="mt-15 background-blur-md bg-amber-500/80 border-amber-300/50 rounded-full px-3.5 py-1">
         ✦ Handpicked Luxury Escapes
       </p>
